@@ -1,0 +1,18 @@
+<h1>Our First Page</h1>
+
+<form action="/contact">
+  <input type="text" name="student_name" placeholder="Who are you looking for?" value="<%= params[:student_name] %>">
+  <input type="number" name="student_length">
+  <input type="submit">
+</form>
+
+<h3>List of Students:</h3>
+
+<ul>
+  <% @students.each do |student| %>
+    <li><%= student %></li>
+  <% end %>
+</ul>
+
+<%= link_to "About Page", about_path %>
+<%= link_to "Go to Home", root_path %>
